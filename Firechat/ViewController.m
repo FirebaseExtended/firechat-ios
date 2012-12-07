@@ -8,11 +8,10 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
-
-@end
-
 @implementation ViewController
+
+@synthesize textField;
+@synthesize tableView;
 
 - (void)keyboardWillShow:(NSNotification*)notification
 {
@@ -80,6 +79,16 @@
     
     [[NSNotificationCenter defaultCenter]
         removeObserver:self name:UIKeyboardWillHideNotification object:nil];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField*)aTextField
+{
+    return [aTextField resignFirstResponder];
+}
+
+- (void)hideTextFieldIfNeeded
+{
+    
 }
 
 @end

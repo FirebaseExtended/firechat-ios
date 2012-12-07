@@ -24,6 +24,7 @@
 		1669E545166ED05F00C535A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1669E51D166ED05F00C535A9 /* Foundation.framework */; };
 		1669E54D166ED05F00C535A9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1669E54B166ED05F00C535A9 /* InfoPlist.strings */; };
 		1669E550166ED05F00C535A9 /* FirechatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1669E54F166ED05F00C535A9 /* FirechatTests.m */; };
+		16D044E416718E13006D1FC5 /* UITouchTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D044E316718E13006D1FC5 /* UITouchTableView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		1669E54C166ED05F00C535A9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1669E54E166ED05F00C535A9 /* FirechatTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirechatTests.h; sourceTree = "<group>"; };
 		1669E54F166ED05F00C535A9 /* FirechatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirechatTests.m; sourceTree = "<group>"; };
+		16D044E216718E13006D1FC5 /* UITouchTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITouchTableView.h; sourceTree = "<group>"; };
+		16D044E316718E13006D1FC5 /* UITouchTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITouchTableView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +129,8 @@
 				1669E539166ED05F00C535A9 /* ViewController.h */,
 				1669E53A166ED05F00C535A9 /* ViewController.m */,
 				1669E522166ED05F00C535A9 /* Supporting Files */,
+				16D044E216718E13006D1FC5 /* UITouchTableView.h */,
+				16D044E316718E13006D1FC5 /* UITouchTableView.m */,
 			);
 			path = Firechat;
 			sourceTree = "<group>";
@@ -277,6 +282,7 @@
 				1669E528166ED05F00C535A9 /* main.m in Sources */,
 				1669E52C166ED05F00C535A9 /* AppDelegate.m in Sources */,
 				1669E53B166ED05F00C535A9 /* ViewController.m in Sources */,
+				16D044E416718E13006D1FC5 /* UITouchTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +467,7 @@
 				1669E555166ED05F00C535A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1669E556166ED05F00C535A9 /* Build configuration list for PBXNativeTarget "FirechatTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +476,7 @@
 				1669E558166ED05F00C535A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

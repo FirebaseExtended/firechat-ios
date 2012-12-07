@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		162149F316727FBC00C022D2 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 162149F216727FBC00C022D2 /* Firebase.framework */; };
 		1669E51C166ED05F00C535A9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1669E51B166ED05F00C535A9 /* UIKit.framework */; };
 		1669E51E166ED05F00C535A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1669E51D166ED05F00C535A9 /* Foundation.framework */; };
 		1669E520166ED05F00C535A9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1669E51F166ED05F00C535A9 /* CoreGraphics.framework */; };
@@ -17,8 +16,7 @@
 		1669E52E166ED05F00C535A9 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1669E52D166ED05F00C535A9 /* Default.png */; };
 		1669E530166ED05F00C535A9 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1669E52F166ED05F00C535A9 /* Default@2x.png */; };
 		1669E532166ED05F00C535A9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1669E531166ED05F00C535A9 /* Default-568h@2x.png */; };
-		1669E535166ED05F00C535A9 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1669E533166ED05F00C535A9 /* MainStoryboard_iPhone.storyboard */; };
-		1669E538166ED05F00C535A9 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1669E536166ED05F00C535A9 /* MainStoryboard_iPad.storyboard */; };
+		1669E535166ED05F00C535A9 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1669E533166ED05F00C535A9 /* iPhone.storyboard */; };
 		1669E53B166ED05F00C535A9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1669E53A166ED05F00C535A9 /* ViewController.m */; };
 		1669E543166ED05F00C535A9 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1669E542166ED05F00C535A9 /* SenTestingKit.framework */; };
 		1669E544166ED05F00C535A9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1669E51B166ED05F00C535A9 /* UIKit.framework */; };
@@ -26,6 +24,10 @@
 		1669E54D166ED05F00C535A9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1669E54B166ED05F00C535A9 /* InfoPlist.strings */; };
 		1669E550166ED05F00C535A9 /* FirechatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1669E54F166ED05F00C535A9 /* FirechatTests.m */; };
 		16D044E416718E13006D1FC5 /* UITouchTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D044E316718E13006D1FC5 /* UITouchTableView.m */; };
+		16DAC9DD167287D400A2B44D /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DAC9DC167287D400A2B44D /* libicucore.dylib */; };
+		16DAC9DF167287DD00A2B44D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DAC9DE167287DD00A2B44D /* Security.framework */; };
+		16DAC9E1167287E400A2B44D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DAC9E0167287E400A2B44D /* CFNetwork.framework */; };
+		16DAC9E3167287E900A2B44D /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DAC9E2167287E900A2B44D /* Firebase.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +41,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		162149F216727FBC00C022D2 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
 		1669E517166ED05F00C535A9 /* Firechat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Firechat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1669E51B166ED05F00C535A9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1669E51D166ED05F00C535A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -53,8 +54,7 @@
 		1669E52D166ED05F00C535A9 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		1669E52F166ED05F00C535A9 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		1669E531166ED05F00C535A9 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		1669E534166ED05F00C535A9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		1669E537166ED05F00C535A9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		1669E534166ED05F00C535A9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/iPhone.storyboard; sourceTree = "<group>"; };
 		1669E539166ED05F00C535A9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		1669E53A166ED05F00C535A9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		1669E541166ED05F00C535A9 /* FirechatTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FirechatTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,6 +65,10 @@
 		1669E54F166ED05F00C535A9 /* FirechatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirechatTests.m; sourceTree = "<group>"; };
 		16D044E216718E13006D1FC5 /* UITouchTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITouchTableView.h; sourceTree = "<group>"; };
 		16D044E316718E13006D1FC5 /* UITouchTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITouchTableView.m; sourceTree = "<group>"; };
+		16DAC9DC167287D400A2B44D /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		16DAC9DE167287DD00A2B44D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		16DAC9E0167287E400A2B44D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		16DAC9E2167287E900A2B44D /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +76,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				162149F316727FBC00C022D2 /* Firebase.framework in Frameworks */,
+				16DAC9E3167287E900A2B44D /* Firebase.framework in Frameworks */,
+				16DAC9E1167287E400A2B44D /* CFNetwork.framework in Frameworks */,
+				16DAC9DF167287DD00A2B44D /* Security.framework in Frameworks */,
+				16DAC9DD167287D400A2B44D /* libicucore.dylib in Frameworks */,
 				1669E51C166ED05F00C535A9 /* UIKit.framework in Frameworks */,
 				1669E51E166ED05F00C535A9 /* Foundation.framework in Frameworks */,
 				1669E520166ED05F00C535A9 /* CoreGraphics.framework in Frameworks */,
@@ -95,7 +102,10 @@
 		1669E50C166ED05F00C535A9 = {
 			isa = PBXGroup;
 			children = (
-				162149F216727FBC00C022D2 /* Firebase.framework */,
+				16DAC9E2167287E900A2B44D /* Firebase.framework */,
+				16DAC9E0167287E400A2B44D /* CFNetwork.framework */,
+				16DAC9DE167287DD00A2B44D /* Security.framework */,
+				16DAC9DC167287D400A2B44D /* libicucore.dylib */,
 				1669E521166ED05F00C535A9 /* Firechat */,
 				1669E548166ED05F00C535A9 /* FirechatTests */,
 				1669E51A166ED05F00C535A9 /* Frameworks */,
@@ -128,8 +138,7 @@
 			children = (
 				1669E52A166ED05F00C535A9 /* AppDelegate.h */,
 				1669E52B166ED05F00C535A9 /* AppDelegate.m */,
-				1669E533166ED05F00C535A9 /* MainStoryboard_iPhone.storyboard */,
-				1669E536166ED05F00C535A9 /* MainStoryboard_iPad.storyboard */,
+				1669E533166ED05F00C535A9 /* iPhone.storyboard */,
 				1669E539166ED05F00C535A9 /* ViewController.h */,
 				1669E53A166ED05F00C535A9 /* ViewController.m */,
 				1669E522166ED05F00C535A9 /* Supporting Files */,
@@ -247,8 +256,7 @@
 				1669E52E166ED05F00C535A9 /* Default.png in Resources */,
 				1669E530166ED05F00C535A9 /* Default@2x.png in Resources */,
 				1669E532166ED05F00C535A9 /* Default-568h@2x.png in Resources */,
-				1669E535166ED05F00C535A9 /* MainStoryboard_iPhone.storyboard in Resources */,
-				1669E538166ED05F00C535A9 /* MainStoryboard_iPad.storyboard in Resources */,
+				1669E535166ED05F00C535A9 /* iPhone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,20 +325,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		1669E533166ED05F00C535A9 /* MainStoryboard_iPhone.storyboard */ = {
+		1669E533166ED05F00C535A9 /* iPhone.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				1669E534166ED05F00C535A9 /* en */,
 			);
-			name = MainStoryboard_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		1669E536166ED05F00C535A9 /* MainStoryboard_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1669E537166ED05F00C535A9 /* en */,
-			);
-			name = MainStoryboard_iPad.storyboard;
+			name = iPhone.storyboard;
 			sourceTree = "<group>";
 		};
 		1669E54B166ED05F00C535A9 /* InfoPlist.strings */ = {
@@ -406,7 +406,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Firechat/Firechat-Prefix.pch";
 				INFOPLIST_FILE = "Firechat/Firechat-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -421,7 +423,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Firechat/Firechat-Prefix.pch";
 				INFOPLIST_FILE = "Firechat/Firechat-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

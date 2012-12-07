@@ -9,8 +9,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Firebase/Firebase.h>
 
 @interface ViewController : UIViewController
+
+@property (nonatomic, strong) NSMutableArray* chat;
 
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;

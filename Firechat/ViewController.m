@@ -10,6 +10,8 @@
 
 #import "ViewController.h"
 
+#define kFirechatNS @"https://firechat-ios.firebaseio-demo.com/"
+
 @implementation ViewController
 
 @synthesize textField;
@@ -54,7 +56,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	self.chat = [[NSMutableArray alloc] init];
+    
 }
 
 - (void)didReceiveMemoryWarning

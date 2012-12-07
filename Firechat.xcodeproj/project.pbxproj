@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		162149F316727FBC00C022D2 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 162149F216727FBC00C022D2 /* Firebase.framework */; };
 		1669E51C166ED05F00C535A9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1669E51B166ED05F00C535A9 /* UIKit.framework */; };
 		1669E51E166ED05F00C535A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1669E51D166ED05F00C535A9 /* Foundation.framework */; };
 		1669E520166ED05F00C535A9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1669E51F166ED05F00C535A9 /* CoreGraphics.framework */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		162149F216727FBC00C022D2 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
 		1669E517166ED05F00C535A9 /* Firechat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Firechat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1669E51B166ED05F00C535A9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1669E51D166ED05F00C535A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -70,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				162149F316727FBC00C022D2 /* Firebase.framework in Frameworks */,
 				1669E51C166ED05F00C535A9 /* UIKit.framework in Frameworks */,
 				1669E51E166ED05F00C535A9 /* Foundation.framework in Frameworks */,
 				1669E520166ED05F00C535A9 /* CoreGraphics.framework in Frameworks */,
@@ -92,6 +95,7 @@
 		1669E50C166ED05F00C535A9 = {
 			isa = PBXGroup;
 			children = (
+				162149F216727FBC00C022D2 /* Firebase.framework */,
 				1669E521166ED05F00C535A9 /* Firechat */,
 				1669E548166ED05F00C535A9 /* FirechatTests */,
 				1669E51A166ED05F00C535A9 /* Frameworks */,
@@ -395,6 +399,10 @@
 		1669E554166ED05F00C535A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Firechat/Firechat-Prefix.pch";
 				INFOPLIST_FILE = "Firechat/Firechat-Info.plist";
@@ -406,6 +414,10 @@
 		1669E555166ED05F00C535A9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Firechat/Firechat-Prefix.pch";
 				INFOPLIST_FILE = "Firechat/Firechat-Info.plist";

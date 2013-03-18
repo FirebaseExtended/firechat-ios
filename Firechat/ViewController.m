@@ -35,12 +35,11 @@
     self.name = [NSString stringWithFormat:@"Guest%d", arc4random() % 1000];
     [nameField setTitle:self.name forState:UIControlStateNormal];
     
-    // Setup a handler for event "child_added".
-    [self.firebase on:FEventTypeChildAdded doCallback:^(FDataSnapshot *snapshot) {
+    [self.firebase observeEventType:FEventTypeChildAdded withBlock:^(FDataSnapshot *snapshot) {
         // Add the chat message to the array.
-        [self.chat addObject:[snapshot val]];
+        [self.chat addObject:snapshot.value];
         // Reload the table view so the new message will show up.
-        [self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
+        [self.tableView reloadData];
     }];
 }
 
@@ -59,7 +58,7 @@
 
     // This will also add the message to our local array self.chat because
     // the FEventTypeChildAdded event will be immediately fired.
-    [self.firebase push:@{@"name" : self.name, @"text": aTextField.text}];
+    [[self.firebase childByAutoId] setValue:@{@"name" : self.name, @"text": aTextField.text}];
 
     [aTextField setText:@""];
     return NO;
@@ -90,8 +89,8 @@
     
     NSDictionary* chatMessage = [self.chat objectAtIndex:index.row];
     
-    cell.textLabel.text = [chatMessage objectForKey:@"text"];
-    cell.detailTextLabel.text = [chatMessage objectForKey:@"name"];
+    cell.textLabel.text = chatMessage[@"text"];
+    cell.detailTextLabel.text = chatMessage[@"name"];
     
     return cell;
 }

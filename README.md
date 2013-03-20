@@ -1,8 +1,8 @@
-
 Firechat-iOS
 ============
 
-Firechat is an example application demonstrating use of the Firebase iOS SDK.
+Firechat is a simple chat/messaging app that uses the Firebase iOS SDK. Customize the views to easily
+add messaging to your apps!
 
 License
 -------

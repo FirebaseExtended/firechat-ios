@@ -87,7 +87,7 @@
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     
-    NSDictionary* chatMessage = [self.chat objectAtIndex:index.row];
+    NSDictionary* chatMessage = [[[self.chat reverseObjectEnumerator] allObjects] objectAtIndex:index.row];
     
     cell.textLabel.text = chatMessage[@"text"];
     cell.detailTextLabel.text = chatMessage[@"name"];

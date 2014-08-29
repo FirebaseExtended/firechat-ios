@@ -12,11 +12,16 @@
 
 #define kFirechatNS @"https://firechat-ios.firebaseio-demo.com/"
 
+@interface ViewController ()
+@property (nonatomic) BOOL reverse;
+@end
+
 @implementation ViewController
 
 @synthesize nameField;
 @synthesize textField;
 @synthesize tableView;
+@synthesize reverse;
 
 #pragma mark - Setup
 
@@ -35,9 +40,16 @@
     self.name = [NSString stringWithFormat:@"Guest%d", arc4random() % 1000];
     [nameField setTitle:self.name forState:UIControlStateNormal];
     
+    // Decide whether or not to reverse the messages
+    reverse = NO;
+    
     [self.firebase observeEventType:FEventTypeChildAdded withBlock:^(FDataSnapshot *snapshot) {
         // Add the chat message to the array.
-        [self.chat insertObject:snapshot.value atIndex:0];
+        if (reverse) {
+            [self.chat insertObject:snapshot.value atIndex:0];
+        } else {
+            [self.chat addObject:snapshot.value];
+        }
         // Reload the table view so the new message will show up.
         [self.tableView reloadData];
     }];

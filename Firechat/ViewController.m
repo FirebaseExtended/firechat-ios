@@ -13,7 +13,7 @@
 #define kFirechatNS @"https://firechat-ios.firebaseio-demo.com/"
 
 @interface ViewController ()
-@property (nonatomic) BOOL reverse;
+@property (nonatomic) BOOL newMessagesOnTop;
 @end
 
 @implementation ViewController
@@ -21,7 +21,7 @@
 @synthesize nameField;
 @synthesize textField;
 @synthesize tableView;
-@synthesize reverse;
+@synthesize newMessagesOnTop;
 
 #pragma mark - Setup
 
@@ -41,17 +41,34 @@
     [nameField setTitle:self.name forState:UIControlStateNormal];
     
     // Decide whether or not to reverse the messages
-    reverse = NO;
+    newMessagesOnTop = YES;
+    
+    // This allows us to check if these were messages already stored on the server
+    // when we booted up (YES) or if they are new messages since we've started the app.
+    // This is so that we can batch together the initial messages' reloadData for a perf gain.
+    __block BOOL initialAdds = YES;
     
     [self.firebase observeEventType:FEventTypeChildAdded withBlock:^(FDataSnapshot *snapshot) {
         // Add the chat message to the array.
-        if (reverse) {
+        if (newMessagesOnTop) {
             [self.chat insertObject:snapshot.value atIndex:0];
         } else {
             [self.chat addObject:snapshot.value];
         }
+        
         // Reload the table view so the new message will show up.
+        if (!initialAdds) {
+            [self.tableView reloadData];
+        }
+    }];
+    
+    // Value event fires right after we get the events already stored in the Firebase repo.
+    // We've gotten the initial messages stored on the server, and we want to run reloadData on the batch.
+    // Also set initialAdds=NO so that we'll reload after each additional childAdded event.
+    [self.firebase observeSingleEventOfType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
+        // Reload the table view so that the intial messages show up
         [self.tableView reloadData];
+        initialAdds = NO;
     }];
 }
 

@@ -28,24 +28,24 @@
 
 #import <Foundation/Foundation.h>
 
-
 @class Firebase;
 
 /**
- * A DataSnapshot contains data from a Firebase location. Any time you read 
- * Firebase data, you receive the data as a DataSnapshot.
+ * An FDataSnapshot contains data from a Firebase location. Any time you read 
+ * Firebase data, you receive the data as an FDataSnapshot.
  *
- * DataSnapshots are passed to the event callbacks you attach with on: or once:.
+ * FDataSnapshots are passed to the blocks you attach with observeEventType:withBlock: or observeSingleEvent:withBlock:.
  * They are efficiently-generated immutable copies of the data at a Firebase location.
- * They can't be modified and will never change. To modify data, 
- * you always use a Firebase reference (e.g. with set:).
+ * They can't be modified and will never change. To modify data at a location,
+ * use a Firebase reference (e.g. with setValue:).
  */
 @interface FDataSnapshot : NSObject
 
-- (id) valueInExportFormat;
+
+/** @name Navigating and inspecting a snapshot */
 
 /**
- * Get a FDataSnapshot for the location at the specified relative path.
+ * Get an FDataSnapshot for the location at the specified relative path.
  * The relative path can either be a simple child name (e.g. 'fred') 
  * or a deeper slash-separated path (e.g. 'fred/name/first'). If the child
  * location has no data, an empty FDataSnapshot is returned.
@@ -57,46 +57,37 @@
 
 
 /**
- * Return true if the specified child exists.
+ * Return YES if the specified child exists.
  *
  * @param childPathString A relative path to the location of a potential child.
- * @return True if data exists at the specified childPathString, else false.
+ * @return YES if data exists at the specified childPathString, else false.
  */
 - (BOOL) hasChild:(NSString *)childPathString;
 
-/**
- * Enumerate through the FDataSnapshot’s children (in priority order).
- * The provided callback will be called synchronously with a FDataSnapshot for each child.
- *
- * @param action A function which will be called for each child FDataSnapshot.
- *   The callback can return true to cancel further enumeration.
- * @return true if enumeration was canceled due to your callback returning true.
- */
-//- (BOOL) forEach:(fbt_bool_datasnapshot)action;
 
 /**
- * Return true if the DataSnapshot has any children.
+ * Return YES if the DataSnapshot has any children.
  * 
- * @return True if this snapshot has any children, else false.
+ * @return YES if this snapshot has any children, else NO.
  */
 - (BOOL) hasChildren;
 
-/**
- * Get the name of the location that generated this FDataSnapshot.
- *
- * @return A NSString containing the name for the location of this FDataSnapshot.
- */
-//- (NSString *) name;
+
+/** @name Data export */
 
 /**
- * Get the number of children for this DataSnapshot.
+ * Returns the raw value at this location, coupled with any metadata, such as priority.
  *
- * @return An integer indicating the number of children.
+ * Priorities, where they exist, are accessible under the ".priority" key in instances of NSDictionary. 
+ * For leaf locations with priorities, the value will be under the ".value" key.
  */
-//- (int) numChildren;
+- (id) valueInExportFormat;
+
+
+/** @name Properties */
 
 /**
- * Converts the contents of this data snapshot to native objects.
+ * Returns the contents of this data snapshot as native types.
  *
  * Data types returned:
  * * NSDictionary
@@ -107,13 +98,46 @@
  * @return The data as a native object.
  */
 @property (strong, readonly, nonatomic) id value;
+
+
+/**
+ * Get the number of children for this DataSnapshot.
+ *
+ * @return An integer indicating the number of children.
+ */
 @property (readonly, nonatomic) NSUInteger childrenCount;
+
+
+/**
+ * Get a Firebase reference for the location that this data came from
+ *
+ * @return A Firebase instance for the location of this data
+ */
 @property (nonatomic, readonly, strong) Firebase* ref;
+
+
+/**
+ * The name of the location that generated this FDataSnapshot.
+ *
+ * @return An NSString containing the name for the location of this FDataSnapshot.
+ */
 @property (strong, readonly, nonatomic) NSString* name;
+
+
+/**
+ * An iterator for snapshots of the child nodes in this snapshot.
+ * You can use the native for..in syntax:
+ *
+ * for (FDataSnapshot* child in snapshot.children) {
+ *     ...
+ * }
+ *
+ * @return An NSEnumerator of the children
+ */
 @property (strong, readonly, nonatomic) NSEnumerator* children;
 
 /**
- * Get the priority of the data in this FDataSnapshot.
+ * The priority of the data in this FDataSnapshot.
  *
  * @return The priority as a string, or nil if no priority was set.
  */

@@ -31,7 +31,20 @@
 
 @interface FTransactionResult : NSObject
 
+/**
+ * Used for runTransactionBlock:. Indicates that the new value should be saved at this location
+ *
+ * @param value An FMutableData instance containing the new value to be set
+ * @return An FTransactionResult instance that can be used as a return value from the block given to runTransactionBlock:
+ */
 + (FTransactionResult *) successWithValue:(FMutableData *)value;
+
+
+/**
+ * Used for runTransactionBlock:. Indicates that the current transaction should no longer proceed.
+ *
+ * @return An FTransactionResult instance that can be used as a return value from the block given to runTransactionBlock:
+ */
 + (FTransactionResult *) abort;
 
 @end

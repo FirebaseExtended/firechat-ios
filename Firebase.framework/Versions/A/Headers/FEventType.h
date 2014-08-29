@@ -29,12 +29,15 @@
 #ifndef Firebase_FEventType_h
 #define Firebase_FEventType_h
 
-typedef enum {
-    FEventTypeChildAdded,    // 0
-    FEventTypeChildRemoved,  // 1
-    FEventTypeChildChanged,  // 2
-    FEventTypeChildMoved,    // 3
-    FEventTypeValue          // 4
-} FEventType;
+/**
+ * This enum is the set of events that you can observe at a Firebase location.
+ */
+typedef NS_ENUM(NSInteger, FEventType) {
+    FEventTypeChildAdded,    // 0, fired when a new child node is added to a location
+    FEventTypeChildRemoved,  // 1, fired when a child node is removed from a location
+    FEventTypeChildChanged,  // 2, fired when a child node at a location changes
+    FEventTypeChildMoved,    // 3, fired when a child node moves relative to the other child nodes at a location
+    FEventTypeValue          // 4, fired when any data changes at a location and, recursively, any children
+};
 
 #endif

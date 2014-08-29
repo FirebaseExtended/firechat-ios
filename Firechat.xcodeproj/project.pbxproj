@@ -25,6 +25,8 @@
 		16DAC9DD167287D400A2B44D /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DAC9DC167287D400A2B44D /* libicucore.dylib */; };
 		16DAC9DF167287DD00A2B44D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DAC9DE167287DD00A2B44D /* Security.framework */; };
 		16DAC9E1167287E400A2B44D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DAC9E0167287E400A2B44D /* CFNetwork.framework */; };
+		5F126E9719AFF9BE00A66FDC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F126E9619AFF9BE00A66FDC /* SystemConfiguration.framework */; };
+		5F126E9919AFF9C100A66FDC /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F126E9819AFF9C100A66FDC /* libc++.dylib */; };
 		ED9A7E4216F7C6F100030E3E /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED9A7E4116F7C6F100030E3E /* Firebase.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +64,8 @@
 		16DAC9DC167287D400A2B44D /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		16DAC9DE167287DD00A2B44D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		16DAC9E0167287E400A2B44D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		5F126E9619AFF9BE00A66FDC /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		5F126E9819AFF9C100A66FDC /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		ED9A7E4116F7C6F100030E3E /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,6 +74,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F126E9919AFF9C100A66FDC /* libc++.dylib in Frameworks */,
+				5F126E9719AFF9BE00A66FDC /* SystemConfiguration.framework in Frameworks */,
 				16DAC9E1167287E400A2B44D /* CFNetwork.framework in Frameworks */,
 				16DAC9DF167287DD00A2B44D /* Security.framework in Frameworks */,
 				16DAC9DD167287D400A2B44D /* libicucore.dylib in Frameworks */,
@@ -96,10 +102,6 @@
 		1669E50C166ED05F00C535A9 = {
 			isa = PBXGroup;
 			children = (
-				ED9A7E4116F7C6F100030E3E /* Firebase.framework */,
-				16DAC9E0167287E400A2B44D /* CFNetwork.framework */,
-				16DAC9DE167287DD00A2B44D /* Security.framework */,
-				16DAC9DC167287D400A2B44D /* libicucore.dylib */,
 				1669E521166ED05F00C535A9 /* Firechat */,
 				1669E51A166ED05F00C535A9 /* Frameworks */,
 				1669E518166ED05F00C535A9 /* Products */,
@@ -118,6 +120,12 @@
 		1669E51A166ED05F00C535A9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ED9A7E4116F7C6F100030E3E /* Firebase.framework */,
+				16DAC9E0167287E400A2B44D /* CFNetwork.framework */,
+				16DAC9DE167287DD00A2B44D /* Security.framework */,
+				16DAC9DC167287D400A2B44D /* libicucore.dylib */,
+				5F126E9819AFF9C100A66FDC /* libc++.dylib */,
+				5F126E9619AFF9BE00A66FDC /* SystemConfiguration.framework */,
 				1669E51B166ED05F00C535A9 /* UIKit.framework */,
 				1669E51D166ED05F00C535A9 /* Foundation.framework */,
 				1669E51F166ED05F00C535A9 /* CoreGraphics.framework */,

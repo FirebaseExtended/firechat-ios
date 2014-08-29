@@ -107,6 +107,7 @@
     return [self.chat count];
 }
 
+// This method changes the height of the text boxes based on how much text there is.
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSDictionary* chatMessage = [self.chat objectAtIndex:indexPath.row];

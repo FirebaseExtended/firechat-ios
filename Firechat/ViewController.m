@@ -107,6 +107,24 @@
     return [self.chat count];
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSDictionary* chatMessage = [self.chat objectAtIndex:indexPath.row];
+    
+    NSString *text = chatMessage[@"text"];
+    
+    // typical textLabel.frame = {{10, 30}, {260, 22}}
+    const CGFloat TEXT_LABEL_WIDTH = 260;
+    CGSize constraint = CGSizeMake(TEXT_LABEL_WIDTH, 20000);
+    
+    // typical textLabel.font = font-family: "Helvetica"; font-weight: bold; font-style: normal; font-size: 18px
+    CGSize size = [text sizeWithFont:[UIFont systemFontOfSize:18] constrainedToSize:constraint lineBreakMode:NSLineBreakByWordWrapping]; // requires iOS 6+
+    const CGFloat CELL_CONTENT_MARGIN = 22;
+    CGFloat height = MAX(CELL_CONTENT_MARGIN + size.height, 44);
+    
+    return height;
+}
+
 - (UITableViewCell*)tableView:(UITableView*)table cellForRowAtIndexPath:(NSIndexPath *)index
 {
     static NSString *CellIdentifier = @"Cell";
@@ -114,6 +132,8 @@
     
     if (cell == nil) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+        cell.textLabel.font = [UIFont systemFontOfSize:18];
+        cell.textLabel.numberOfLines = 0;
     }
     
     NSDictionary* chatMessage = [self.chat objectAtIndex:index.row];

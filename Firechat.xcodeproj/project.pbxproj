@@ -18,9 +18,6 @@
 		1669E532166ED05F00C535A9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1669E531166ED05F00C535A9 /* Default-568h@2x.png */; };
 		1669E535166ED05F00C535A9 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1669E533166ED05F00C535A9 /* iPhone.storyboard */; };
 		1669E53B166ED05F00C535A9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1669E53A166ED05F00C535A9 /* ViewController.m */; };
-		1669E543166ED05F00C535A9 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1669E542166ED05F00C535A9 /* SenTestingKit.framework */; };
-		1669E544166ED05F00C535A9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1669E51B166ED05F00C535A9 /* UIKit.framework */; };
-		1669E545166ED05F00C535A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1669E51D166ED05F00C535A9 /* Foundation.framework */; };
 		16D044E416718E13006D1FC5 /* UITouchTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D044E316718E13006D1FC5 /* UITouchTableView.m */; };
 		16DAC9DD167287D400A2B44D /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DAC9DC167287D400A2B44D /* libicucore.dylib */; };
 		16DAC9DF167287DD00A2B44D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DAC9DE167287DD00A2B44D /* Security.framework */; };
@@ -29,16 +26,6 @@
 		5F126E9919AFF9C100A66FDC /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F126E9819AFF9C100A66FDC /* libc++.dylib */; };
 		ED9A7E4216F7C6F100030E3E /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED9A7E4116F7C6F100030E3E /* Firebase.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		1669E546166ED05F00C535A9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1669E50E166ED05F00C535A9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1669E516166ED05F00C535A9;
-			remoteInfo = Firechat;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1669E517166ED05F00C535A9 /* Firechat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Firechat.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,7 +44,6 @@
 		1669E534166ED05F00C535A9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/iPhone.storyboard; sourceTree = "<group>"; };
 		1669E539166ED05F00C535A9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		1669E53A166ED05F00C535A9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		1669E541166ED05F00C535A9 /* FirechatTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FirechatTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1669E542166ED05F00C535A9 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		16D044E216718E13006D1FC5 /* UITouchTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITouchTableView.h; sourceTree = "<group>"; };
 		16D044E316718E13006D1FC5 /* UITouchTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITouchTableView.m; sourceTree = "<group>"; };
@@ -86,16 +72,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1669E53D166ED05F00C535A9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1669E543166ED05F00C535A9 /* SenTestingKit.framework in Frameworks */,
-				1669E544166ED05F00C535A9 /* UIKit.framework in Frameworks */,
-				1669E545166ED05F00C535A9 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -112,7 +88,6 @@
 			isa = PBXGroup;
 			children = (
 				1669E517166ED05F00C535A9 /* Firechat.app */,
-				1669E541166ED05F00C535A9 /* FirechatTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -183,31 +158,13 @@
 			productReference = 1669E517166ED05F00C535A9 /* Firechat.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1669E540166ED05F00C535A9 /* FirechatTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1669E556166ED05F00C535A9 /* Build configuration list for PBXNativeTarget "FirechatTests" */;
-			buildPhases = (
-				1669E53C166ED05F00C535A9 /* Sources */,
-				1669E53D166ED05F00C535A9 /* Frameworks */,
-				1669E53E166ED05F00C535A9 /* Resources */,
-				1669E53F166ED05F00C535A9 /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1669E547166ED05F00C535A9 /* PBXTargetDependency */,
-			);
-			name = FirechatTests;
-			productName = FirechatTests;
-			productReference = 1669E541166ED05F00C535A9 /* FirechatTests.octest */;
-			productType = "com.apple.product-type.bundle";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		1669E50E166ED05F00C535A9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastTestingUpgradeCheck = 0610;
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = Firebase;
 			};
@@ -224,7 +181,6 @@
 			projectRoot = "";
 			targets = (
 				1669E516166ED05F00C535A9 /* Firechat */,
-				1669E540166ED05F00C535A9 /* FirechatTests */,
 			);
 		};
 /* End PBXProject section */
@@ -242,30 +198,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1669E53E166ED05F00C535A9 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		1669E53F166ED05F00C535A9 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1669E513166ED05F00C535A9 /* Sources */ = {
@@ -279,22 +212,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1669E53C166ED05F00C535A9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		1669E547166ED05F00C535A9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1669E516166ED05F00C535A9 /* Firechat */;
-			targetProxy = 1669E546166ED05F00C535A9 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1669E524166ED05F00C535A9 /* InfoPlist.strings */ = {
@@ -402,40 +320,6 @@
 			};
 			name = Release;
 		};
-		1669E557166ED05F00C535A9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Firechat.app/Firechat";
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Firechat/Firechat-Prefix.pch";
-				INFOPLIST_FILE = "FirechatTests/FirechatTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Debug;
-		};
-		1669E558166ED05F00C535A9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Firechat.app/Firechat";
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Firechat/Firechat-Prefix.pch";
-				INFOPLIST_FILE = "FirechatTests/FirechatTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -453,15 +337,6 @@
 			buildConfigurations = (
 				1669E554166ED05F00C535A9 /* Debug */,
 				1669E555166ED05F00C535A9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1669E556166ED05F00C535A9 /* Build configuration list for PBXNativeTarget "FirechatTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1669E557166ED05F00C535A9 /* Debug */,
-				1669E558166ED05F00C535A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -137,7 +137,7 @@
         cell.textLabel.numberOfLines = 0;
     }
     
-    NSDictionary* chatMessage = [self.chat objectAtIndex:index.row];
+    NSDictionary* chatMessage = [[[self.chat reverseObjectEnumerator] allObjects] objectAtIndex:index.row];
     
     cell.textLabel.text = chatMessage[@"text"];
     cell.detailTextLabel.text = chatMessage[@"name"];

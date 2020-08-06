@@ -10,6 +10,13 @@ add messaging to your apps!
 
 * By default, new messages are on top. You can reverse the messages by setting `newMessagesOnTop = NO` in the `viewDidLoad:` method of `ViewController`.
 
+## Status
+
+![Status: Archived](https://img.shields.io/badge/Status-Archived-red)
+
+This sample is no longer actively maintained and is left here for reference only.
+
+
 License
 -------
 [MIT](http://firebase.mit-license.org)
